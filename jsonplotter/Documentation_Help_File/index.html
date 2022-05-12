@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>json Plotter Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+
+<!-- SMOOTH SCROLL -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- End of SMOOTH SCROLL -->
+
+</head>
+
+<body>
+	   <div class="container">
+	  <hr>
+            <p class="prepend-top">
+    <p align="center"><a>
+    <img src="assets/images/json-Plotter-Screeshot.png" name="toc" id="toc"/>
+</a></p>
+		<h1 class="center">jsonPlotter v-2.0 - Wordpress Edition</h1>
+		<div class="borderTop">
+
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+              <p align="center"><a href="http://www.amplifiii.com">
+<img src="assets/images/amplifiii-logo-small.png" alt="amplifiii logo" />
+</a></p>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+		  <div class="span-12 last">
+		    <p class="prepend-top append-0">First of all many thanks for purchasing our iOS app template,  we really hope that you find it  useful and that it satisfies all your requirements.</p>
+		    <p class="prepend-top append-0">If you have any questions that are beyond the scope of this help file please feel free to email us using the link below.</p>
+        <p class="prepend-top append-0">Thanks again!</p>
+        <p class="prepend-top append-0"><strong>the amplifiii team<br>
+          </strong></p>
+        <p class="prepend-top append-0"><strong>email: <a href="mailto:amplifiii@gmail.com">amplifiii@gmail.com</a>
+        </strong> </p>
+		  </div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+	    <h2 class="alt">Table of Contents</h2>
+        <ol class="alpha">
+          <li><a href="#IncludedFiles">Included Files</a></li>
+          <li><a href="#AQuickNoteOnSupport">A Quick Note On Support</a></li>
+          <li><a href="#jsonPlotterPrinciplesandDefinitions">jsonPlotter Principles and Definitions</a></li>
+          <li><a href="#ApplicationSetup">Application Setup</a></li>
+          <li><a href="#PointsToNote">Points To Note</a></li>
+          <li><a href="#CustomizingYourApplication">Customizing Your Application</a></li>
+          <li><a href="#Finally">Finally</a></li>
+        </ol>
+        <h3>&nbsp;</h3>
+        <h3 id="IncludedFiles"><strong id="IncludedFiles">Included Files</strong>:</h3>
+        <p>To help you get your app up and running as soon as possible we&rsquo;ve included the following useful files:<br>
+	    - The application in zipped format.<br>
+	    - The application in unzipped format.<br>
+	    - A copy of the license agreement - so we all know where we stand re application usage.<br>
+	    - Extensive documentation outlining how to install and setup your mapping application (this document.) This is designed to be useful to both the novice and expert developer alike.</p>
+<hr>
+<h3 id="AQuickNoteOnSupport"><strong id="AQuickNoteOnSupport">A Quick Note On  Support</strong>:</h3>
+<p>If you&rsquo;re experiencing any issues we encourage you to read this document first. It provides extensive information on how to setup your new application and how to utilize the various options and features included.</p>
+<p>Whilst we do offer support to our customers via themeforest threaded comments we can only provide direct support for our applications and its core features. Unfortunately we cannot guarantee that our application will function with all other third party components, plugins and frameworks because this is simply our of our control. If you plan to add numerous additions to this application please note that we cannot facilitate support of any conflicts they might cause with the default application functionality.</p>
+Please feel free to contact us using the <a href="http://amplifiii.com/theme_support/">support</a> section of our <a href="http://amplifiii.com/">amplifiii.com</a> website if you are having any major difficulties beyond the scope of this document, we will aim to get back to you with a solution as soon as possible. Any suggestions around application improvements or notification of bugs is also greatly appreciated.
+<p>&nbsp;</p>
+<hr>
+<h3 id="jsonPlotterPrinciplesandDefinitions"><strong id="#jsonPlotterPrinciplesandDefinitions">jsonPlotter Principles and Definitions</strong>:</h3>
+<p>Before we get into the nuts and bolts of the app it's important that we cover off the main principles of jsonPlotter. This will help you understand the full app functionality and also it's scope for deployment. Essentially the app is designed to take a json feed of location points (or entities) from a self hosted Wordpress install, parse and process these and then present the information on an iOS device. Wordpress posts are translated into entities which are displayed in both a map and  a list view. An entity detail view is provided to display detailed information about each entity. An initial Chooser view is also provided to segment the entities allowing them to be grouped/categorized and then segmented by the end user.</p>
+<p>This is an extremely versatile setup as it allows you to present various types of entities within the app. Usage examples include:</p>
+<ul>
+  <li>An coffee shop app that presents coffee shops (the entities) that are segmented (through the Chooser view) by city.</li>
+  <li>An app that creates different types of entities in one location, for example different types of restaurants in New York. The entity types to display are selected through the Chooser view.</li>
+  </ul>
+<p>If you open and run the included app you will see that the app and example data utilized presents coffee shops in various cities in the US. In this case the coffee shops are the entities (Wordpress posts) and the following views apply:</p>
+<p align="center">The Chooser View. This view in which you choose how you would like to segment your entities. </p>
+<p align="center"><img src="assets/images/01_preview1.jpg" width="220" height="459"></p>
+<p align="center">The Map View. This is where the map pins of the entities (segmented by the Chooser View) are presented. User location is also shown allowing users to pinpoint their location and view map pin proximity.</p>
+<p align="center"><img src="assets/images/02_preview2.jpg" width="220" height="459"></p>
+<p align="center">The List View, This is a list view of the where a list of entities (segmented by the Chooser View) are presented. This view can help users find specific entities they are looking for and includes a handy search function to aid with this.</p>
+<p align="center"><img src="assets/images/03_preview3.jpg" width="220" height="459"></p>
+<p align="center">The Detail View shows further details for the entity. This view displays images, a zoomed map location, entity detail and also provides a Twitter share button so users can share entity listings socially.</p>
+<p align="center"><img src="assets/images/04_preview4.jpg" width="220" height="459"></p>
+<p>All data is fed into the app through a Wordpress Post json feed of allowing you to easily update the data presented in the app whenever required. App data is initially called on  app load and stored in an internal app database. Data is refreshed when the app is place in the background memory ensuring all listing s are kept up to date. The database can also be refreshed on demand by the user at any time by using the refresh button (top right of app view.)A number of checks are made also by the app to ensure a web connection is present, if not the user is notified.</p>
+<p>The jsonPlotter example app included is designed to display coffee shop entities across 5 American cities. Users can choose which city they would like to view, corresponding entities (i.e. the coffee shops in the city chosen) are displayed. To guide you through the inner working of the app example provide  and reveal the scope for customization we will now guide you through how the included app (and corresponding json feed) was  setup. The whole process can be completed in under 1 hour, in fact, if all things are properly setup, this could take just 15 minutes!</p>
+<hr>
+<h3><strong id="ApplicationSetup2">Folder Structure:</strong></h3>
+<p>The main files within the included Plotter v2.0 folder are as follows:</p>
+<p><img src="assets/images/Screen Shot 2015-08-08 at 5.35.43 pm.png" width="369" height="307"></p>
+<p>The main image files that you will want to edit/modify to customize the look and fee of your app are contained within the &quot;Supporting Files&quot; sub folder included within the main Plotter v2.0 folder. If you want to edit the main code and build on the app functionality the main folders you will want to edit are contained within the top 7 folders, i.e. &quot;Splash Pages&quot; to &quot; &quot;Entity-Information.&quot; I find that the files within these folders are best viewed in conjunction with the overall Storyboard view and Assistant Editor however that is purely my preference.</p>
+<hr>
+<h3><strong id="ApplicationSetup">Application Setup:</strong></h3>
+<p>Application setup can be facilitated by following the 4 steps as outlined below:</p>
+<p><strong>1 - Install Wordpress</strong></p>
+<p>You will need a working Wordpress installation to feed data into your application. Simply install Wordpress onto your server as per usual - detailed information + instructions regarding the installation and setup of WordPress please follow the WordPress Codex Installation Instructions found here:</p>
+<p align="center"><a href="http://codex.wordpress.org/Installing_WordPress">http://codex.wordpress.org/Installing_WordPress</a></p>
+<p>&nbsp;</p>
+<p><strong>2 - Json api Plugin Install</strong></p>
+<p>Install the following plugin: JSON API (A RESTful API for WordPress) by Dan Phiffer (Dan this is awesome by the way!) Using this plugin you can create a  a json feed of your Wordpress posts. This is the feed that will be passed into and utilized by the jsonPlotter app.</p>
+<p>Once this plugin is installed you can view/test the feed by adding &quot;<a href="http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&custom_fields=Address,City,Phone%20Number,Website%20Address,Lattitude,Longditude,thumbnail=full,Postend&page=%25ld">api/get_recent_posts</a>&quot; to your base url, i.e. use following URL construction:</p>
+<p align="center"><a href="http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&custom_fields=Address,City,Phone%20Number,Website%20Address,Lattitude,Longditude,thumbnail=full,Postend&page=%25ld">http://YOUR-SITE-ADDRESS/api/get_recent_posts</a></p>
+<p align="center">Our example of the feed being passed into the included app uses <a href="http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&custom_fields=Address,City,Phone%20Number,Website%20Address,Lattitude,Longditude,thumbnail=full,Postend&page=%25ld">http://amplifiii.com/jsonPlotter/api/get_recent_posts/</a></p>
+<p align="left">&nbsp;</p>
+<p align="left"><strong>3 - Setup your json feed:</strong></p>
+<p align="left">Post data is fed through the feed into the app using both standard post information (title, body etc) and by using additional custom post types to satisfy entity data/information requirements. In our example/the initial application build included we have utilized the following standard and custom post information to map to our entity data requirements:</p>
+<ul>
+  <li>Entity Title = Standard Wordpress Post Title</li>
+  <li>Entity Description = Standard Wordpress Post Description/Body</li>
+  <li>Entity Image = Standard Wordpress  Post Featured Image</li>
+  <li>Entity Address = An &quot;Address&quot; Custom Post Type</li>
+  <li>Entity Latitude = A &quot;Latitude&quot; Custom Post Type (essential for plotting data point on map.)</li>
+  <li>Entity Longditude = A &quot;Longditude&quot; Custom Post Type (essential for plotting data point on map.)</li>
+</ul>
+<p align="left">The latitude and longitude data custom post types are essential for plotting map points, without these the map view will not be able to plot the entities. You can convert an address to latitude and longditude data using one of the awesome converters that can be found online.</p>
+<p align="left"> Aside from Latitude and Longditude information  all other data points included are used to present information within the map and can be edited as desired.</p>
+<p align="left">Once we have setup our posts as required and inserted app data the relevant information can be pulled through the feed by adjusting the json URL call as follows:</p>
+<p><a href="http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&custom_fields=Address,City,Phone%20Number,Website%20Address,Lattitude,Longditude,thumbnail=full,Postend&page=%25ld">http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&amp;custom_fields=Address,City,Phone%20Number,Website%20Address,Latitude,Longitude,thumbnail=full,Postend&amp;page=%ld</a></p> 
+<p> If you copy and paste this into a browser you can see how the resulting data is presented. Further information on how to construct json URL calls can be found on the json plugin web page. </p>
+<p></p>
+<p><strong>4 - Pass data into the app:</strong></p>
+<p>To pass the data presented by the json feed into into the app you will need to open the project in Xcode (by double clicking the included jsonPlotter.xcodeproj file) and then editing the &quot;EntityModel.m&quot; file, i.e:</p>
+<p><img src="assets/images/Screen Shot 2015-08-08 at 5.19.20 pm.png" width="369" height="351"></p>
+<p>You will need to find and update the following 2 sections of this file with your relevant json feeds URL (as highlighted in bold below):</p>
+<p>1 - First Update the Connection Check URL: NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@&quot;<strong>http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=1</strong>&quot;]</p>
+<p>The area to update is highlighted in the screenshot below:</p>
+<p><img src="assets/images/Screen Shot 2015-08-08 at 5.20.29 pm.png" width="785" height="104"></p>
+<p>2 - Update the Data Feed URL: NSString *currentPageStr = [NSString stringWithFormat:@&quot;<strong>http://amplifiii.com/jsonPlotter/api/get_recent_posts/?count=2000&amp;custom_fields=Address,City,Phone Number,address Address,Latitude,Longitude,thumbnail=full,Postend&amp;page=%ld</strong>&quot;, (long)currentPage];</p>
+<p>Again, the area to update is highlighted in the screenshot below:</p>
+<p><img src="assets/images/Screen Shot 2015-08-08 at 5.20.49 pm.png" width="783" height="94"></p>
+<p>If you've done everything right you should now be able to build and run your app and the json feed will pass through post data from your wordpress site to your application.</p>
+<p>&nbsp;</p>
+<hr>
+<h3><strong id="PointsToNote">Points to Note:</strong></h3>
+<ul>
+  <li> The chooser elements within the app are initially setup as &quot;City&quot; custom post types. These can be re-named as you please however you will need to update the custom post type name and the name of the elements established within the app.</li>
+  <li> Location data should be stored as Longitude and Latitude custom post types, without these the app will not be able to plot any pins on the map (as it wont know where they are meant to be plotted).</li>
+  <li>The Pin annotation detail view is initially mapped to an &quot;Address&quot; custom post type however this can be changed to satisfy any data type requirements you may have, as with the City post type.</li>
+</ul>
+<h3>&nbsp;</h3>
+<hr>
+<h3 id="CustomizingYourApplication"><strong>Customizing your application</strong>:</h3>
+<p>App customization is key to making your app unique. All files provided are stored in a logical file structure (splash pages, icons etc) so you shouldn't have any problem modifying the look and feel of the app. Do let us know if you have any problems.</p>
+<p>&nbsp;</p>
+<hr>
+<h3 id="Finally"><strong>Finally</strong>:</h3>
+<p>Once again many thanks for your support, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+<p align="center"><a href="#toc">Back to top</a></p>
+<hr>
+<p align="center"><a href="http://www.amplifiii.com">
+<img src="assets/images/amplifiii-logo-small.png" alt="amplifiii logo" />
+</a></p>
+<hr>
+<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
